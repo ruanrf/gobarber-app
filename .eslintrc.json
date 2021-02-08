@@ -29,7 +29,9 @@
         "prettier"
     ],
     "rules": {
-        "react-hooks/rules-of-hooks": "error",
+        "no-tabs": ["error", {"allowIndentationTabs": true}]
+        ,"indent": ["error", 2, {"SwitchCase": 1}]
+        ,"react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
         "import/prefer-default-export": "off",
@@ -42,7 +44,16 @@
             "tsx": "never"
             }
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": ["error", {
+            "endOfLine":"auto"
+        }],
+        "max-len": [
+            "error",
+            {
+                "tabWidth": 2,
+                "ignoreUrls": true
+            }
+        ]
     },
     "settings": {
         "import/resolver": {
